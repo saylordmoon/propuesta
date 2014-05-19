@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TV Perú</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Carlos Alvarez - Alvarez.is">
+
+  <!-- Le styles -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/font-style.css" rel="stylesheet">
+  <link href="css/flexslider.css" rel="stylesheet">
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+  <style type="text/css">
+    body 
+    {
+      padding-top: 60px;
+    }
+  </style>
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Le fav and touch icons -->
+  <link rel="shortcut icon" href="ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+
+  <!-- Google Fonts call. Font Used Open Sans & Raleway -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <!-- NAVIGATION MENU -->
+
+  <div class="navbar-nav navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="img/logotvperu30.png" alt=""> TV Peru</a>
+    </div> 
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html"><i class="icon-home icon-white"></i> Cuadro de mando</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  </div>
+
+    <div class="container">
+
+    	<!-- MAPA Y ESTACIONES -->
+    	<div class="row">
+
+    		<div class="col-sm-6 col-lg-6">
+    			<div class="double-dash-unit">
+    				<dtitle>Red de Filiales y estaciones de radio y televisión</dtitle>
+    				<hr />
+    				<div id="div-mapa"></div>
+    			</div>
+    		</div>
+
+    		<div class="col-sm-6 col-lg-6">
+    			<div class="row">
+
+           <!-- REGIONES -->
+           <div class="col-sm-6 col-lg-6">
+            <div class="dash-unit">
+              <dtitle>Regiones</dtitle>
+              <hr />
+              <div class="cont" align="left" style="padding-left: 20px;">
+                <input type="checkbox" id="region-norte" /> Region Norte | <bold><ok>8</ok></bold> <br />
+                <input type="checkbox" id="region-centro" /> Region Centro Oriente | <bold><ok>6</ok></bold> <br />
+                <input type="checkbox" id="region-sur" /> Region Sur | <bold><ok>6</ok></bold> <br />
+                <input type="checkbox" id="region-lima" /> Lima | <bold><ok>1</ok></bold> <br />
+              </div>
+            </div>
+
+          </div>
+
+          <!-- DONUT CHART BLOCK -->
+          <div class="col-sm-6 col-lg-6">
+           <div class="half-unit">
+            <dtitle>Hora Local</dtitle>
+            <hr />
+            <div class="clockcenter">
+              <digiclock>12:45:25</digiclock>
+            </div>
+          </div>
+           <div class="half-unit">
+            <dtitle>Filiales</dtitle>
+            <hr />
+            <ul id="ul-filiales"></ul>
+          </div>
+        </div>
+      </div><!-- Row -->
+
+      <div class="row">
+       <!-- ESTACIONES DE RADIO BLOCK -->
+       <div class="col-sm-6 col-lg-6">
+         <div class="dash-unit">
+           <dtitle>Total Estaciones de Radio</dtitle>
+           <hr>
+           <div class="cont">
+            <p><bold>22</bold> | Estaciones Radio FM en Filiales</p>
+            <br>
+            <p><bold>13</bold> | Retrasmisoras de Radio FM</p>
+            <br>
+            <p><bold>04</bold> | Estaciones de Radio AM</p>
+          </div>
+          <div class="info-user">
+            <span aria-hidden="true" class="li_music fs2"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-6">
+       <div class="dash-unit">
+        <dtitle>Total Estaciones de Televisión</dtitle>
+        <hr>
+        <div class="cont">
+          <p><bold>01</bold> | <ok>Sede Central</ok></p>
+          <br>
+          <p><bold>21</bold> | Filiales</p>
+          <br>
+          <p><bold>279</bold> | Estaciones TV</p>
+        </div>
+        <div class="info-user">
+          <span aria-hidden="true" class="li_tv fs2"></span>
+        </div>
+      </div>
+    </div>
+  </div><!-- row -->
+</div>
+
+</div> <!-- first Row -->
+
+
+<!-- FIRST ROW OF BLOCKS -->     
+<div class="row">
+
+  <!-- GRAPH CHART - lineandbars.js file -->     
+  <div class="col-sm-3 col-lg-3">
+    <div class="dash-unit">
+      <dtitle>Estaciones de Televisión</dtitle>
+      <ul style="font-size: 8px;" id="ul-estaciones-tv"></ul>
+    </div>
+  </div>
+
+  <!-- LAST MONTH REVENUE -->     
+  <div class="col-sm-3 col-lg-3">
+    <div class="dash-unit">
+      <dtitle>Frecuencias de Radio</dtitle>	
+      <ul style="font-size: 8px;" id="ul-estaciones-radio"></ul>
+    </div>
+  </div>
+
+  <!-- USER PROFILE BLOCK -->
+  <div class="col-sm-3 col-lg-3">
+    <div class="dash-unit">
+     <dtitle>Recursos Humanos</dtitle>
+     <ul style="font-size: 8px;" id="ul-recursos-humanos"></ul>
+   </div>
+ </div>
+
+ <!-- DONUT CHART BLOCK -->
+ <div class="col-sm-3 col-lg-3">
+  <div class="dash-unit">
+    <dtitle>Información Estadística INEI</dtitle>
+    <hr>
+    <div id="load"></div>
+    <h2>45%</h2>
+  </div>
+</div>
+
+</div><!-- /row -->
+
+</div> <!-- /container -->
+
+    <div id="footerwrap">
+     <footer class="clearfix"></footer>
+     <div class="container">
+      <div class="row">
+       <div class="col-sm-12 col-lg-12">
+         <p><img src="img/logotvperu140.png" alt=""></p>
+         <p>Propuesta - 2014</p>
+       </div>
+     </div><!-- /row -->
+    </div><!-- /container -->		
+    </div><!-- /footerwrap -->
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/dash-charts.js"></script>
+
+    <!-- NOTY JAVASCRIPT -->
+    <script type="text/javascript" src="js/noty/jquery.noty.js"></script>
+    <script type="text/javascript" src="js/noty/layouts/top.js"></script>
+    <script type="text/javascript" src="js/noty/layouts/topLeft.js"></script>
+    <script type="text/javascript" src="js/noty/layouts/topRight.js"></script>
+    <script type="text/javascript" src="js/noty/layouts/topCenter.js"></script>
+
+    <!-- You can add more layouts if you want -->
+    <script type="text/javascript" src="js/noty/themes/default.js"></script>
+    <!-- <script type="text/javascript" src="js/dash-noty.js"></script> This is a Noty bubble when you init the theme-->
+    <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="js/jquery.flexslider.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="js/admin.js"></script>
+
+    <link href="js/qtip/jquery.qtip.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/qtip/jquery.qtip.min.js"></script>
+
+    <script type="text/javascript" src="js/mapa/raphael-min.js"></script>	
+    <script type="text/javascript" src="js/mapa/peru.js"></script>
+    <script type="text/javascript" src="js/mapa/data.js"></script>
+    <script type="text/javascript" src="js/mapa/menu.js"></script>
+
+  </body>
+</html>
