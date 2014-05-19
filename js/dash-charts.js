@@ -29,8 +29,8 @@
 				name: 'Income',
 				innerSize: '65%',
 				data: [
-					{ name: 'load percentage', y: 45.0, color: '#b2c831' },
-					{ name: 'rest', y: 55.0, color: '#3d3d3d' }
+					{ name: 'Sin Electricidad', y: 45.0, color: '#b2c831' },
+					{ name: 'Con Electricidad', y: 55.0, color: '#3d3d3d' }
 				],
 				dataLabels: {
 					enabled: false,
@@ -73,8 +73,8 @@
 				name: 'SiteInfo',
 				innerSize: '65%',
 				data: [
-					{ name: 'Used', y: 65.0, color: '#fa1d2d' },
-					{ name: 'Rest', y: 35.0, color: '#3d3d3d' }
+					{ name: 'Analfabetismo', y: 36.0, color: '#fa1d2d' },
+					{ name: 'Resto', y: 35.0, color: '#3d3d3d' }
 				],
 				dataLabels: {
 					enabled: false,
