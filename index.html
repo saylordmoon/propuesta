@@ -76,117 +76,157 @@
     		<div class="col-sm-6 col-lg-6">
     			<div class="row">
 
-           <!-- REGIONES -->
-           <div class="col-sm-6 col-lg-6">
-            <div class="dash-unit">
-              <dtitle>Regiones</dtitle>
-              <hr />
-              <div class="cont" align="left" style="padding-left: 20px;">
-                <input type="checkbox" id="region-norte" /> Region Norte | <bold><ok>8</ok></bold> <br />
-                <input type="checkbox" id="region-centro" /> Region Centro Oriente | <bold><ok>6</ok></bold> <br />
-                <input type="checkbox" id="region-sur" /> Region Sur | <bold><ok>6</ok></bold> <br />
-                <input type="checkbox" id="region-lima" /> Lima | <bold><ok>1</ok></bold> <br />
+            <!-- REGIONES -->
+            <div class="col-sm-6 col-lg-6">
+              <div class="dash-unit">
+                <dtitle>Regiones</dtitle>
+                <hr />
+                <div class="cont" align="left" style="padding-left: 20px;">
+                  <input type="checkbox" id="region-norte" /> Region Norte | <bold><ok>8</ok></bold> <br />
+                  <input type="checkbox" id="region-centro" /> Region Centro Oriente | <bold><ok>6</ok></bold> <br />
+                  <input type="checkbox" id="region-sur" /> Region Sur | <bold><ok>6</ok></bold> <br />
+                  <input type="checkbox" id="region-lima" /> Lima | <bold><ok>1</ok></bold> <br />
+                </div>
               </div>
             </div>
 
-          </div>
+            <!-- DONUT CHART BLOCK -->
+            <div class="col-sm-6 col-lg-6">
+              <div class="half-unit">
+                <dtitle>Hora Local</dtitle>
+                <hr />
+                <div class="clockcenter">
+                  <digiclock>12:45:25</digiclock>
+                </div>
+              </div>
+              <div class="half-unit">
+                <dtitle>Filiales</dtitle>
+                <hr />
+                <ul id="ul-filiales"></ul>
+              </div>
+            </div>
+          </div><!-- Row -->
 
-          <!-- DONUT CHART BLOCK -->
-          <div class="col-sm-6 col-lg-6">
-           <div class="half-unit">
-            <dtitle>Hora Local</dtitle>
-            <hr />
-            <div class="clockcenter">
-              <digiclock>12:45:25</digiclock>
+          <div class="row">
+            <!-- ESTACIONES DE RADIO BLOCK -->
+            <div class="col-sm-6 col-lg-6">
+              <div class="dash-unit">
+                <dtitle>Total Estaciones de Radio</dtitle>
+                <hr>
+                <div class="cont">
+                  <p><bold>22</bold> | Estaciones Radio FM en Filiales</p>
+                  <br>
+                  <p><bold>13</bold> | Retrasmisoras de Radio FM</p>
+                  <br>
+                  <p><bold>04</bold> | Estaciones de Radio AM</p>
+                </div>
+                <div class="info-user">
+                  <span aria-hidden="true" class="li_music fs2"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-6">
+             <div class="dash-unit">
+              <dtitle>Total Estaciones de Televisión</dtitle>
+              <hr />
+              <div class="cont">
+                <p><bold>01</bold> | <ok>Sede Central</ok></p>
+                <br>
+                <p><bold>21</bold> | Filiales</p>
+                <br>
+                <p><bold>279</bold> | Estaciones TV</p>
+              </div>
+              <div class="info-user">
+                <span aria-hidden="true" class="li_tv fs2"></span>
+              </div>
             </div>
           </div>
-           <div class="half-unit">
-            <dtitle>Filiales</dtitle>
-            <hr />
-            <ul id="ul-filiales"></ul>
-          </div>
-        </div>
-      </div><!-- Row -->
+        </div><!-- row -->
+      </div>
 
+      <!-- FIRST ROW OF BLOCKS -->     
       <div class="row">
-       <!-- ESTACIONES DE RADIO BLOCK -->
-       <div class="col-sm-6 col-lg-6">
-         <div class="dash-unit">
-           <dtitle>Total Estaciones de Radio</dtitle>
-           <hr>
-           <div class="cont">
-            <p><bold>22</bold> | Estaciones Radio FM en Filiales</p>
-            <br>
-            <p><bold>13</bold> | Retrasmisoras de Radio FM</p>
-            <br>
-            <p><bold>04</bold> | Estaciones de Radio AM</p>
+
+        <!-- GRAPH CHART - lineandbars.js file -->     
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>Estaciones de Televisión</dtitle>
+            <hr />
+            <ul style="font-size: 8px;" id="ul-estaciones-tv"></ul>
           </div>
-          <div class="info-user">
-            <span aria-hidden="true" class="li_music fs2"></span>
+        </div>
+
+        <!-- LAST MONTH REVENUE -->     
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>Frecuencias de Radio</dtitle>	
+            <hr />
+            <ul style="font-size: 8px;" id="ul-estaciones-radio"></ul>
+          </div>
+        </div>
+
+        <!-- USER PROFILE BLOCK -->
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>Recursos Humanos</dtitle>
+            <hr />
+            <ul style="font-size: 8px;" id="ul-recursos-humanos"></ul>
+          </div>
+        </div>
+
+        <!-- DONUT CHART BLOCK -->
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>Poblacion sin Electricidad - INEI</dtitle>
+            <hr>
+            <div id="load"></div>
+            <h2>45%</h2>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-6">
-       <div class="dash-unit">
-        <dtitle>Total Estaciones de Televisión</dtitle>
-        <hr>
-        <div class="cont">
-          <p><bold>01</bold> | <ok>Sede Central</ok></p>
-          <br>
-          <p><bold>21</bold> | Filiales</p>
-          <br>
-          <p><bold>279</bold> | Estaciones TV</p>
+      <!-- FIRST ROW OF BLOCKS -->     
+      <div class="row">
+        <!-- GRAPH CHART - lineandbars.js file -->     
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>TOTAL DE ESTACIONES DE RADIO FM</dtitle>
+            <hr />
+            <br /><br />
+            <img src="img/Infraestructura01.png" width="100%"/>  
+          </div>
         </div>
-        <div class="info-user">
-          <span aria-hidden="true" class="li_tv fs2"></span>
+
+        <!-- LAST MONTH REVENUE -->     
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>TOTAL DE ESTACIONES DE RADIO AM</dtitle> 
+            <hr />
+            <br /><br />
+            <img src="img/Infraestructura02.png" width="100%"/>
+          </div>
+        </div>
+
+        <!-- USER PROFILE BLOCK -->
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>TOTAL DE ESTACIONES DE TV - VHF</dtitle>
+            <hr />
+            <br /><br />
+            <img src="img/Infraestructura03.png" width="100%"/>
+          </div>
+        </div>
+
+        <!-- DONUT CHART BLOCK -->
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>% Mujeres analfabetas - INEI</dtitle>
+            <hr>
+            <div id="space"></div>
+            <h2>36%</h2>
+          </div>
         </div>
       </div>
-    </div>
-  </div><!-- row -->
-</div>
-
-</div> <!-- first Row -->
-
-
-<!-- FIRST ROW OF BLOCKS -->     
-<div class="row">
-
-  <!-- GRAPH CHART - lineandbars.js file -->     
-  <div class="col-sm-3 col-lg-3">
-    <div class="dash-unit">
-      <dtitle>Estaciones de Televisión</dtitle>
-      <ul style="font-size: 8px;" id="ul-estaciones-tv"></ul>
-    </div>
-  </div>
-
-  <!-- LAST MONTH REVENUE -->     
-  <div class="col-sm-3 col-lg-3">
-    <div class="dash-unit">
-      <dtitle>Frecuencias de Radio</dtitle>	
-      <ul style="font-size: 8px;" id="ul-estaciones-radio"></ul>
-    </div>
-  </div>
-
-  <!-- USER PROFILE BLOCK -->
-  <div class="col-sm-3 col-lg-3">
-    <div class="dash-unit">
-     <dtitle>Recursos Humanos</dtitle>
-     <ul style="font-size: 8px;" id="ul-recursos-humanos"></ul>
-   </div>
- </div>
-
- <!-- DONUT CHART BLOCK -->
- <div class="col-sm-3 col-lg-3">
-  <div class="dash-unit">
-    <dtitle>Información Estadística INEI</dtitle>
-    <hr>
-    <div id="load"></div>
-    <h2>45%</h2>
-  </div>
-</div>
-
-</div><!-- /row -->
 
 </div> <!-- /container -->
 
